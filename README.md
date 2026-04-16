@@ -1,4 +1,4 @@
-# 🧬 Pediatric Genetic Disorder Prediction
+# Pediatric Genetic Disorder Prediction
 
 > Multi-target classification of genetic disorder type and subclass from heterogeneous pediatric clinical data.
 
