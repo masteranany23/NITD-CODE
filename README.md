@@ -20,9 +20,8 @@ Challenges: missing values, noisy data, severe class imbalance, multi-class pred
 ## Repository Structure
 
 ```
-├── notebook880f15c302.ipynb              # Full preprocessing pipeline
-├── model_target1_genetic_disorder.ipynb  # Model training — Target 1 (4 classes)
-├── model_target2_disorder_subclass.ipynb # Model training — Target 2 (10 classes)
+├── preprocessing.ipynb              # Full preprocessing pipeline
+├── model_train.ipynb  # Model training 
 ├── result.csv                            # Final predictions
 └── README.md
 ```
@@ -44,7 +43,7 @@ Challenges: missing values, noisy data, severe class imbalance, multi-class pred
 | Feature selection | Mutual Information + Random Forest importance |
 | **Output** | `X_train (39 474 × 53)` · `X_test (9 465 × 53)` — 0 nulls, 0 infs ✅ |
 
-### Stage 2 — Model Training (one notebook per target)
+### Stage 2 — Model Training 
 
 ```
 Load → Baseline CV → Optuna Tuning → Stacking / Voting Ensemble → OOF Report → Predict
@@ -87,9 +86,8 @@ Patient Id | Genetic Disorder | Disorder Subclass
 pip install xgboost lightgbm catboost optuna imbalanced-learn scikit-learn pandas numpy matplotlib seaborn
 ```
 
-1. Run `notebook880f15c302.ipynb` (preprocessing)
-2. Run `model_target1_genetic_disorder.ipynb`
-3. Run `model_target2_disorder_subclass.ipynb`
-4. Merge outputs → `result.csv`
+1. Run `preprocessing.ipynb` (preprocessing)
+2. Run `model_train.ipynb`
+3. Merge outputs → `result.csv`
 
 **Environment:** Python 3.10 · Kaggle free-tier CPU
